@@ -19,12 +19,14 @@
   {{ form(form) }}
   
   <!-- Member list -->
+  <div class="container-fluid">
   <h2>Membres de l'équipage</h2>
-  <section class="member-list">
-    <div class="member-item">Eleftheria</div>
-    <div class="member-item">Gennadios</div>
-    <div class="member-item">Lysimachos</div>
-  </section>
+    <div class="row">
+        {% for argonaute in argonautes %}
+                <div class="col-4 name-center">{{ argonaute.name }}</div>
+        {% endfor %}
+    </div>
+  </div>
 </main>
 
 <footer>
